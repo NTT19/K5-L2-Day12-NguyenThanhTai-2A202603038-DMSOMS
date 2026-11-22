@@ -1,0 +1,7 @@
+frame_id,source,phenomenon,affected_field,effect_on_label
+S01_ir,IR_sim,"Ảnh IR-sim đơn sắc làm mất thông tin màu và giảm khả năng phân biệt một số chi tiết trong cabin",frame_meta.light,"giữ light=unknown; không suy đoán ngày/đêm từ ảnh SVIRO"
+S02_ir,IR_sim,"Tương phản thấp/đơn sắc làm ranh giới mặt và ghế trẻ em khó tách hơn ảnh RGB",face; child_seat; infant_seat,"đối chiếu cặp RGB-IR; chỉ gán class và box khi hình dạng đủ rõ, không đoán phần bị che"
+S03_ir,IR_sim,"Vật trong hàng ghế sau khó phân biệt chi tiết khi chỉ nhìn ảnh đơn sắc",object.type,"chỉ chọn bag/box/cup khi hình dạng rõ; nếu không chắc dùng other"
+D02,real_IR,"Phản xạ hoặc vùng che trên kính làm trạng thái hai mắt không chắc chắn",face.eye_left; face.eye_right; face13.occluded,"giữ eye=unknown và bật occluded/outside cho điểm mặt bị ảnh hưởng, không đổi thành closed khi không có bằng chứng"
+D04,real_IR,"Vùng mắt trái bị che/khó quan sát trong ảnh NIR",face.eye_left; face13.left_eye_*,"giữ eye_left=unknown; kiểm tra tính nhất quán giữa thuộc tính mắt và cờ occluded/outside"
+D06,real_IR,"Độ tương phản vùng mắt phải khiến open và unknown dễ bị nhầm",face.eye_right; face13.right_eye_*,"đối chiếu cả bốn điểm mắt; chọn open chỉ khi thấy rõ, nếu không thì unknown kèm cờ phù hợp"

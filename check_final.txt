@@ -1,0 +1,9 @@
+File: export_final.zip
+Ảnh: 22 · đã có frame_meta: 22 · số đối tượng: child_seat=12, face=10, face13=6, hand=12, infant_seat=8, object=8, person=10
+  [WARN] D04.png: eye_left=unknown nhưng không điểm left_eye_* nào có cờ occluded/outside: nếu mắt bị che thì bật occluded, nếu thấy rõ thì chọn open/closed
+  [WARN] D06.png: eye_right=unknown nhưng không điểm right_eye_* nào có cờ occluded/outside: nếu mắt bị che thì bật occluded, nếu thấy rõ thì chọn open/closed
+Kết quả: 0 lỗi, 2 cảnh báo. Cảnh báo cần bạn tự xét, không tự động là sai.
+
+Giải thích cảnh báo:
+- D04.png: eye_left=unknown vì vùng mắt trái không đủ rõ; cảnh báo nhắc kiểm tra tính nhất quán giữa thuộc tính mắt và cờ occluded/outside của face13. Bản v2 đã đồng bộ và không còn cảnh báo.
+- D06.png: eye_right=unknown vì vùng mắt phải không đủ rõ; không suy đoán open/closed khi thiếu bằng chứng. Bản v2 đã rà lại các điểm face13 và không còn cảnh báo.
